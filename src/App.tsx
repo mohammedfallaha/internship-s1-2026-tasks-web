@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Login } from "./Login";
+import { TaskList } from "./TaskList";
 import type { Session } from "./types";
 
 const STORAGE_KEY = "tasks-web-session";
@@ -29,7 +30,7 @@ export default function App() {
         <span>{session.user.email}</span>
         <button onClick={handleLogout}>Log out</button>
       </header>
-      <p>Your tasks will appear here.</p>
+      <TaskList token={session.token} onLogout={handleLogout} />
     </>
   );
 }
