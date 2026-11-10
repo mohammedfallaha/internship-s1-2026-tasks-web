@@ -1,4 +1,4 @@
-import type { Task, TaskChanges, TokenResponse, User } from "./tybes";
+import type { Task, TaskChanges, TokenResponse, User } from "./types";
 
 const BASE_URL: string = import.meta.env.VITE_API_URL;
 
